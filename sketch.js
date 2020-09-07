@@ -1,3 +1,4 @@
+//edited
 var trex, trex_running, trex_collided;
 var ground, invisibleGround, groundImage;
 
@@ -135,6 +136,8 @@ function draw() {
   }
   
   drawSprites();
+
+  trex.x = camera.position.x;
 }
 
 function reset(){
@@ -176,6 +179,9 @@ function spawnClouds() {
     
     //add each cloud to the group
     cloudsGroup.add(cloud);
+
+    cloud.x = camera.position.y
+
   }
   
 }
@@ -208,5 +214,7 @@ function spawnObstacles() {
     obstacle.lifetime = 300;
     //add each obstacle to the group
     obstaclesGroup.add(obstacle);
+
+    obstacle.x = camera.position.y
   }
 }
